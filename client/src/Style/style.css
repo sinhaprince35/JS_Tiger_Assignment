@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body {
     background-color: rgb(245, 246, 247);
+    font-family: 'Roboto', sans-serif;
 }
 
 .form-container {
