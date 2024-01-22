@@ -109,7 +109,6 @@ function VendorForm() {
           value={data.name}
           onChange={handleChange}
           className="input-field"
-          required
         />
         {nameValidate === false && (
           <p className="warning-msg">Vendor Name is missing</p>
@@ -122,7 +121,6 @@ function VendorForm() {
           value={data.accountNo}
           onChange={handleChange}
           className="input-field"
-          required
         />
         {accountValidate === false && (
           <p className="warning-msg">Account No is missing</p>
@@ -135,7 +133,7 @@ function VendorForm() {
           value={data.bankName}
           onChange={handleChange}
           className="input-field"
-          required
+
         />
         {bankNameValidate === false && (
           <p className="warning-msg">Bank Name is missing</p>
@@ -158,7 +156,7 @@ function VendorForm() {
           value={data.address2}
           onChange={handleChange}
           className="input-field"
-          required
+
         />
 
         <label htmlFor="city">City <MandatoryAsterisk/></label>
@@ -168,7 +166,7 @@ function VendorForm() {
           value={data.city}
           onChange={handleChange}
           className="input-field"
-          required
+
         />
 
         <label htmlFor="country">Country <MandatoryAsterisk/></label>
@@ -178,7 +176,7 @@ function VendorForm() {
           value={data.country}
           onChange={handleChange}
           className="input-field"
-          required
+
         />
 
         <label htmlFor="zipCode">Zip Code <MandatoryAsterisk/></label>
@@ -188,7 +186,7 @@ function VendorForm() {
           value={data.zipCode}
           onChange={handleChange}
           className="input-field"
-          required
+
         />
         <Divider />
         <Button variant="contained" color="success" className="submitButton">
