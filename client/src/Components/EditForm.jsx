@@ -12,7 +12,7 @@ const EditForm = () => {
   useEffect(() => {
     const getDetails = async () => {
       let result = await fetch(
-        `https://vendor-management-huht.onrender.com/details/${params.id}`
+        `https://vendor-list-pqch.onrender.com/details/${params.id}`
       );
       result = await result.json();
       // console.log("result", result);
@@ -37,7 +37,7 @@ const EditForm = () => {
     e.preventDefault();
 
     let result = await fetch(
-      `https://vendor-management-huht.onrender.com/update/${params.id}`,
+      `https://vendor-list-pqch.onrender.com/update/${params.id}`,
       {
         method: "Put",
         body: JSON.stringify({

@@ -22,7 +22,7 @@ function VendorList() {
 
   const getDetails = async () => {
     const fetchData = await fetch(
-      "https://vendor-management-huht.onrender.com/details"
+      "https://vendor-list-pqch.onrender.com"
     );
     let result = await fetchData.json();
     console.log("allData", result);
@@ -41,7 +41,7 @@ function VendorList() {
   const handleDelete = async (id) => {
     // console.log("Delete", id);
     let deleteData = await fetch(
-      `https://vendor-management-huht.onrender.com/delete/${id}`,
+      `https://vendor-list-pqch.onrender.com/delete/${id}`,
       {
         method: "Delete",
       }

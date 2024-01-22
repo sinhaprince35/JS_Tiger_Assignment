@@ -41,7 +41,7 @@ function VendorForm() {
       // console.log(data);
 
       const fetchData = await fetch(
-        "https://vendor-management-huht.onrender.com/upload",
+        "https://vendor-list-pqch.onrender.com",
         {
           method: "POST",
           headers: {
