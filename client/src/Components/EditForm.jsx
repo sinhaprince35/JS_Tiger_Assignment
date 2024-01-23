@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { useParams, useNavigate } from "react-router-dom";
 import "../Style/style.css";
+import Button from "@mui/material/Button";
 
 const EditForm = () => {
   const params = useParams();
@@ -141,7 +142,7 @@ const EditForm = () => {
           className="input-field"
         />
 
-        <button className="submitButton">Update</button>
+        <Button variant="contained" color="success" className="submitButton" onClick={handleUpdate}>Update</Button>
       </form>
     </div>
   );

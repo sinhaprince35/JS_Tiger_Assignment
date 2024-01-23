@@ -152,3 +152,9 @@ table button:hover {
     padding: 12px;
     cursor: pointer;
 }
+
+/* @media only screen and (max-width: 400px) {
+    .navbar a {
+        font-size: 14px;
+    }
+} */

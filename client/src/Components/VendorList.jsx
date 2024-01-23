@@ -22,7 +22,7 @@ function VendorList() {
 
   const getDetails = async () => {
     const fetchData = await fetch(
-      "https://vendor-list-pqch.onrender.com"
+      "https://vendor-list-pqch.onrender.com/details"
     );
     let result = await fetchData.json();
     console.log("allData", result);
