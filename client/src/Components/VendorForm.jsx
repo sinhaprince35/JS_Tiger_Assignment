@@ -189,7 +189,7 @@ function VendorForm() {
 
         />
         <Divider />
-        <Button variant="contained" color="success" className="submitButton">
+        <Button variant="contained" color="primary" className="submitButton" onClick={handleSubmit}>
           Submit
         </Button>
       </form>
