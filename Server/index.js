@@ -13,7 +13,6 @@ app.get("/", (req, res) => {
 });
 
 app.post("/upload", async (req, res) => {
-  //   console.log(req.body);
   let data = await User(req.body);
   await data.save();
   res.send({ message: "Data saved in database" });
@@ -29,7 +28,6 @@ app.get("/details", async (req, res) => {
 });
 
 app.delete("/delete/:id", async (req, res) => {
-  //   console.log("id", req.params.id);
   let result = await User.deleteOne({ _id: req.params.id });
   res.send(result);
 });
@@ -44,7 +42,6 @@ app.get("/details/:id", async (req, res) => {
 });
 
 app.put("/update/:id", async (req, res) => {
-  //   console.log("body", req.body);
   let result = await User.updateOne(
     { _id: req.params.id },
     {
