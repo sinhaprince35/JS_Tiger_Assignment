@@ -39,7 +39,6 @@ function VendorList() {
   }, [startIndex, endIndex, userDetails]);
 
   const handleDelete = async (id) => {
-    // console.log("Delete", id);
     let deleteData = await fetch(
       `https://vendor-list-pqch.onrender.com/delete/${id}`,
       {
@@ -48,7 +47,6 @@ function VendorList() {
     );
 
     deleteData = await deleteData.json();
-    // console.log("deleteData", deleteData);
     if (deleteData.acknowledged === true) {
       toast.success("record is deleted");
       getDetails();

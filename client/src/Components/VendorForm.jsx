@@ -7,7 +7,7 @@ import { Divider } from "antd";
 
 function VendorForm() {
   const MandatoryAsterisk = () => {
-    return <span style={{ color: 'red' }}>*</span>;
+    return <span style={{ color: "red" }}>*</span>;
   };
   const navigate = useNavigate();
   const [nameValidate, setNameValidate] = useState(true);
@@ -38,8 +38,6 @@ function VendorForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (data.name !== "" && data.accountNo !== "" && data.bankName !== "") {
-      // console.log(data);
-
       const fetchData = await fetch(
         "https://vendor-list-pqch.onrender.com/upload",
         {
@@ -63,7 +61,6 @@ function VendorForm() {
       });
 
       const dataRes = await fetchData.json();
-      // console.log("dataRes", dataRes);
       if (dataRes) {
         toast.success("Data uploaded seccuessfully");
         setTimeout(() => {
@@ -102,7 +99,9 @@ function VendorForm() {
   return (
     <div>
       <form className="form-container" onSubmit={handleSubmit}>
-        <label htmlFor="name">Vendor Name <MandatoryAsterisk/></label>
+        <label htmlFor="name">
+          Vendor Name <MandatoryAsterisk />
+        </label>
         <input
           type="text"
           name="name"
@@ -114,7 +113,9 @@ function VendorForm() {
           <p className="warning-msg">Vendor Name is missing</p>
         )}
 
-        <label htmlFor="accountNo">Bank Account No <MandatoryAsterisk/></label>
+        <label htmlFor="accountNo">
+          Bank Account No <MandatoryAsterisk />
+        </label>
         <input
           type="text"
           name="accountNo"
@@ -126,14 +127,15 @@ function VendorForm() {
           <p className="warning-msg">Account No is missing</p>
         )}
 
-        <label htmlFor="bankName">Bank Name <MandatoryAsterisk/></label>
+        <label htmlFor="bankName">
+          Bank Name <MandatoryAsterisk />
+        </label>
         <input
           type="text"
           name="bankName"
           value={data.bankName}
           onChange={handleChange}
           className="input-field"
-
         />
         {bankNameValidate === false && (
           <p className="warning-msg">Bank Name is missing</p>
@@ -146,50 +148,58 @@ function VendorForm() {
           value={data.address1}
           onChange={handleChange}
           className="input-field"
-          
         />
 
-        <label htmlFor="address2">Address Line 2 <MandatoryAsterisk/></label>
+        <label htmlFor="address2">
+          Address Line 2 <MandatoryAsterisk />
+        </label>
         <input
           type="text"
           name="address2"
           value={data.address2}
           onChange={handleChange}
           className="input-field"
-
         />
 
-        <label htmlFor="city">City <MandatoryAsterisk/></label>
+        <label htmlFor="city">
+          City <MandatoryAsterisk />
+        </label>
         <input
           type="text"
           name="city"
           value={data.city}
           onChange={handleChange}
           className="input-field"
-
         />
 
-        <label htmlFor="country">Country <MandatoryAsterisk/></label>
+        <label htmlFor="country">
+          Country <MandatoryAsterisk />
+        </label>
         <input
           type="text"
           name="country"
           value={data.country}
           onChange={handleChange}
           className="input-field"
-
         />
 
-        <label htmlFor="zipCode">Zip Code <MandatoryAsterisk/></label>
+        <label htmlFor="zipCode">
+          Zip Code <MandatoryAsterisk />
+        </label>
         <input
           type="text"
           name="zipCode"
           value={data.zipCode}
           onChange={handleChange}
           className="input-field"
-
         />
         <Divider />
-        <Button variant="contained" color="primary" className="submitButton" onClick={handleSubmit}>
+        <Button
+          variant="contained"
+          color="primary"
+          className="submitButton"
+          onClick={handleSubmit}
+        >
           Submit
         </Button>
       </form>

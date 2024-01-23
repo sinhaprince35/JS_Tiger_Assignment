@@ -6,7 +6,6 @@ import Button from "@mui/material/Button";
 
 const EditForm = () => {
   const params = useParams();
-  //   console.log("params", params);
   const navigate = useNavigate();
   const [data, setData] = useState();
 
@@ -16,7 +15,6 @@ const EditForm = () => {
         `https://vendor-list-pqch.onrender.com/details/${params.id}`
       );
       result = await result.json();
-      // console.log("result", result);
       setData(result);
     };
 
